@@ -1,0 +1,181 @@
+{
+    "Title": "Campus Life on the West Side",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "End of dirt path.",
+    "Locations": {
+        "End of dirt path.": {
+            "Body": "After a hike gone wrong, you ventured too far into the woods. Desperate to find your way out of there, you follow what seems to be some sort of path, with leaves sunk into the floor, indicating food traffic. This leads you to an abandoned mansion. You see something inside, 2 people, fighting. One falls the other follows. You wait for either of them to get back up, for neither of them to resurface. You feel perturbed. It is getting dark, you should go see if they need help. You then hear a scream, one behind, and another from the house.",
+            "Choices": [
+                {
+                    "Text": "Head to the house",
+                    "Target": "House"
+                },
+                {
+                    "Text": "Go to the garden",
+                    "Target": "Garden"
+                },
+                {
+                    "Text": "Go to the fountain",
+                    "Target": "Fountain"
+                }
+            ]
+        },
+
+
+        "House": {
+            "Body": "You walk up to the huge mansion, more threatening as you approach. There are a few things about its entrance that feel off. What will you do?",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "End of dirt path."
+                },
+                {
+                    "Text": "Ring doorbell",
+                    "Target": "Ring",
+                    "LookedAt":false
+                },
+                {
+                    "Text": "Try to unlock the door",
+                    "Target": "Unlock"
+                },
+                {
+                    "Text": "Look at it",
+                    "Target": "Look at door",
+                    "LookedAt": false
+                }
+            ]
+        },
+        "Ring": {
+            "Body": "You go up to it and look to see if anyone will answer, all you get is an envelope that drops from the mail slot located at the top of the door. It reads “Find the key before they come, a wish is what you need, or you might just need to run”.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "House"
+                }
+            ]
+        },
+        "Unlock": {
+            "Body": "You try to unlock it",
+            "Choices": [
+                {
+                    "Text": "Go inside",
+                    "Target": "Inside",
+                    "Prereq": "Key"
+                },
+                {
+                    "Text": "No Luck, go back",
+                    "Target": "House"
+                }
+            ]
+        },
+        "Look at door": {
+            "Body": "Its an old wooden door. Pretty solid for how old it is. Theres cobwebs on it from its years of neglect. You can tell its been used though, as the door knob has no dust build up.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "House"
+                }
+            ]
+        },
+        "Inside": {
+            "Body": "To be continued..."
+        },
+
+
+
+        "Garden": {
+            "Body": "For some reason, the garden is actaully flourishing. The soil seems wet from what seems a recent storm. Weirdly enough, all the plants are very much alive and tended to. Some even seem to be pruned.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "End of dirt path."
+                },
+                {
+                    "Text": "Go to the flower bed",
+                    "Target": "Bed",
+                    "LookedAt": false
+                },
+                {
+                    "Text": "Go to bird fountain",
+                    "Target": "Bird Fountain"
+                }
+            ]
+        },
+        "Bed": {
+            "Body": "You admire the gorgeous flower bed. All different kinds of colors ",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Garden"
+                }
+            ]
+        },
+        "Bird Fountain": {
+            "Body": "The bird fountain is cracking, almost broken at this point. You see a faint glint of a sparkle as you observe.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Garden"
+                },
+                {
+                    "Text": "Look inside",
+                    "Target": "Quarter",
+                    "Item": "Coin",
+                    "LookedAt": false
+                }
+            ]
+        },
+        "Quarter": {
+            "Body": "You got a coin.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Bird Fountain"
+                }
+            ]
+        },
+        
+
+
+
+        "Fountain": {
+            "Body": "You walk up to the huge fountain, spewing water from its top. Somehow, it still works. You look inside and notice that there are a lot of slots. The water is murky, so you cant really tell what else is within. But the fountain seems to be in good condition. The top is decorated with a figure resembling a coin.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "End of dirt path."
+                },
+                {
+                    "Text": "Throw Coin",
+                    "Target": "Throw Coin",
+                    "Prereq": "Coin",
+                    "LookedAt": false
+                },
+                {
+                    "Text": "Look at it",
+                    "Target": "Look at fountain",
+                    "LookedAt": false
+                }
+            ]
+        },
+        "Throw Coin": {
+            "Body": "Once you throw the coin in, you see it sink to the bottom. It just slips into one of the slots at the bottom, for you to never see it again. You hear some gears turning, and below you a platform shows up. On top of it lies a key.",
+            "Choices": [
+                {
+                    "Text": "Grab key",
+                    "Target": "Fountain",
+                    "Item": "Key"
+                }
+            ]
+        },
+        "Look at fountain": {
+            "Body": "As you look close, you see more of the designs engraved on its base. There seems to be a lot of scratches all over it. No real polishing has been done with it. You can hear just how hollow it is with the water hitting its base.",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Fountain"
+                }
+            ]
+        }
+    }
+}
